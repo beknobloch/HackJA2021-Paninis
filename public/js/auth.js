@@ -1,7 +1,7 @@
 
 
 // listen for auth status changes and logs them to the console
-
+let thing64;
 
 function parseCSV(csv) {
     let x = csv.split(",");
@@ -9,6 +9,30 @@ function parseCSV(csv) {
         x[i]=x[i].toLowerCase().trim()
     }
     return x;
+}
+
+function convertToBase64() {
+    //Read File
+    let selectedFiles = document.getElementById("myFile").files;
+    //Check File is not Empty
+    if (selectedFiles.length > 0) {
+        // Select the very first file from list
+        let fileToLoad = selectedFiles[0];
+        // FileReader function for read the file.*/
+        let fileReader = new FileReader();
+        let base64;
+        console.log("function");
+        // Onload of file read the file content
+        fileReader.onload = function(fileLoadedEvent) {
+            base64 = fileLoadedEvent.target.result;
+            // Print data in console
+            console.log(base64);
+            thing64 = base64;
+        };
+        // Convert data to base64
+        console.log(fileToLoad);
+        fileReader.readAsDataURL(fileToLoad);
+        }
 }
 
 auth.onAuthStateChanged(user => {
@@ -30,6 +54,8 @@ try{
         if(ele[i].checked) 
             pos = ele[i].value;
     } 
+    
+    convertToBase64();
     signupForm.addEventListener('submit', (e) => {
     // prevent refresh (losing info)
     e.preventDefault();
@@ -38,6 +64,8 @@ try{
     const password = signupForm['signup-password'].value;
     const numbersign = signupForm['signup-number'].value;
     docID = signupForm.email.value;
+    //let resumeFile = document.getElementById("myFile").files[0];
+    console.log(thing64);
     db.collection('users').doc(docID).set({
         name: signupForm.name.value,
         age: signupForm.age.value,
@@ -47,10 +75,10 @@ try{
         email: signupForm.email.value,
         bio: signupForm.bio.value,
         number: numbersign,
-        position: pos
+        position: pos,
+        resume: thing64
     })
-    let resumeFile = signupForm.filename.files[0];
-    db.collection('users').doc(docID).child("resume").put(resumeFile);
+    
 
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
