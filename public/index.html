@@ -238,8 +238,12 @@
         measurementId: "G-WG6P54ND92"
       };
       // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+      // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
     </script>
 
   
