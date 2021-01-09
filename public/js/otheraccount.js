@@ -1,6 +1,7 @@
 const emailElement = document.getElementById('email');
 const nameElement = document.getElementById('name');
 const ageElement = document.getElementById('age');
+const locElement = document.getElementById('location');
 const fieldElement = document.getElementById('field');
 const skillsElement = document.getElementById('skills');
 const bioElement = document.getElementById('bio');
@@ -35,6 +36,7 @@ function runOtherAccount(user)
                             emailElement.innerHTML = d.email;
                             nameElement.innerHTML = d.name;
                             ageElement.innerHTML = d.age;
+                            locElement.innerHTML = d.location;
                             fieldElement.innerHTML = d.field;
                             skillsElement.innerHTML = d.skills;
                             bioElement.innerHTML = d.bio;

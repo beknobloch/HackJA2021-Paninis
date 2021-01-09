@@ -47,7 +47,8 @@ try{
         email: signupForm.email.value,
         bio: signupForm.bio.value,
         number: numbersign,
-        position: pos
+        position: pos,
+        
     })
 
     // sign up the user
