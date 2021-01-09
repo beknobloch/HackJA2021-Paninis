@@ -179,23 +179,21 @@
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
   
   <script>
-    // web app's Firebase configuration
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     var firebaseConfig = {
-      apiKey: "AIzaSyBm-4tu-ZW5kdpLkUw6OLxFjB_ajLJFEnY",
-      authDomain: "preeminent-paninis.firebaseapp.com",
-      databaseURL: "https://preeminent-paninis.firebaseio.com",
-      projectId: "preeminent-paninis",
-      storageBucket: "preeminent-paninis.appspot.com",
-      messagingSenderId: "1025410002463",
-      appId: "1:1025410002463:web:40cec81a8b2a7c8f7caf2a",
-      measurementId: "G-Y35S3D1RJ4"
+      apiKey: "AIzaSyB6M-tVFoREMCxaE55cGl4OercnLOQyo2s",
+      authDomain: "jobnet-4f3b3.firebaseapp.com",
+      databaseURL: "https://jobnet-4f3b3-default-rtdb.firebaseio.com",
+      projectId: "jobnet-4f3b3",
+      storageBucket: "jobnet-4f3b3.appspot.com",
+      messagingSenderId: "504894796007",
+      appId: "1:504894796007:web:1e1cc029847678db943242",
+      measurementId: "G-WG6P54ND92"
     };
-     // Initialize Firebase
-     firebase.initializeApp(firebaseConfig);
-
-    // make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
   </script>
   <script src="js/auth.js" defer></script>
   <script src="js/index.js" defer></script>
