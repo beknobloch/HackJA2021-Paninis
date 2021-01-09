@@ -41,6 +41,7 @@ try{
     db.collection('users').doc(docID).set({
         name: signupForm.name.value,
         age: signupForm.age.value,
+        location: signupForm.location.value,
         field: signupForm.field.value.toLowerCase(),
         skills: parseCSV(signupForm.skills.value),
         email: signupForm.email.value,

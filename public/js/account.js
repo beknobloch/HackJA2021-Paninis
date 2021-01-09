@@ -5,6 +5,7 @@ const fieldObject = document.getElementById('field');
 const skillsObject = document.getElementById('skills');
 const bioObject = document.getElementById('bio');
 const numObject = document.getElementById('number');
+const locObject = document.getElementById('location');
 const form = document.querySelector("#accountForm");
 
 auth.onAuthStateChanged(user => {
@@ -33,6 +34,7 @@ function displayAccount(user)
                     skillsObject.value = doc.data().skills;
                     bioObject.value = doc.data().bio;
                     numObject.value = doc.data().number;
+                    locObject.value = doc.data().location;
                 }
 
             })
@@ -65,6 +67,7 @@ function updateAccount(user){
         db.collection('users').doc(user.email).set({
             name: form.name.value,
             age: form.age.value,
+            location: form.location.value,
             field: form.field.value.toLowerCase(),
             skills: parseCSV(form.skills.value),
             bio: form.bio.value,
