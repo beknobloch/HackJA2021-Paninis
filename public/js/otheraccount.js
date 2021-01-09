@@ -55,7 +55,7 @@ function runOtherAccount(user)
                                 function(file){ 
                                     console.log(file);
 
-                                    resumeElement.innerHTML = "<embed src=\"" + URL.createObjectURL(file) + "\" width=\"800px\">"
+                                    resumeElement.innerHTML = "<embed src=\"" + URL.createObjectURL(file) + "\" width=\"800px\" height=\"800px\">"
                                 }
                             )
 
