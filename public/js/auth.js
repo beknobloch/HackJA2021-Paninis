@@ -47,9 +47,10 @@ try{
         email: signupForm.email.value,
         bio: signupForm.bio.value,
         number: numbersign,
-        position: pos,
-        
+        position: pos
     })
+    let resumeFile = signupForm.filename.files[0];
+    db.collection('users').doc(docID).child("resume").put(resumeFile);
 
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
