@@ -15,6 +15,7 @@ function convertToBase64() {
     //Read File
     let selectedFiles = document.getElementById("myFile").files;
     //Check File is not Empty
+    console.log(selectedFiles.length);
     if (selectedFiles.length > 0) {
         // Select the very first file from list
         let fileToLoad = selectedFiles[0];
@@ -58,7 +59,7 @@ try{
             pos = ele[i].value;
     } 
     
-    convertToBase64();
+    //convertToBase64();
     signupForm.addEventListener('submit', (e) => {
     // prevent refresh (losing info)
     e.preventDefault();
@@ -92,7 +93,7 @@ try{
 
     auth.onAuthStateChanged(user => {
         db.collection('users').doc(docID).update({
-            userID:  "none" || user.uid
+            userID:  user.uid || "none" 
         })
     })
 })
