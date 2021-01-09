@@ -52,3 +52,42 @@
     background-size: 20px 20px;
 
 }
+
+
+search-container input::placeholder{
+    color: #ddd;
+    font-weight: bold;
+
+}
+
+#conversation-list{
+    grid-area: conversation-list;
+    overflow-y: scroll;
+}
+
+.conversation {
+    display: grid;
+    grid-template-columns: 40px 1fr max-content;
+    grid-gap: 10px;
+    color: #ddd;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #002C88;
+    padding: 20px 20px 20px 15px;
+}
+
+.conversation.active,
+.conversation:hover {
+    background: #002C88;
+}
+
+.conversation:hover{
+    cursor: pointer;
+
+}
+
+.conversation > img {
+    grid-row: span 2;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
