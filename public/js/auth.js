@@ -33,6 +33,9 @@ function convertToBase64() {
         console.log(fileToLoad);
         fileReader.readAsDataURL(fileToLoad);
         }
+    else {
+        thing64 = "No resume";
+    }
 }
 
 auth.onAuthStateChanged(user => {
