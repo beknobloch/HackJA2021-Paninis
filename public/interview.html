@@ -3,15 +3,16 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Connect | Job Net</title>
+  <title>Chat | Job Net</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/chat.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-
   <nav class="light-green lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img style="margin-top:4px; width:30%; margin-left: 20%" src="pics/logo.png"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -32,53 +33,73 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-
-
-  <main id="cool">
-  <div class="section no-pad-bot center" id="index-banner">
-    <div class="container center" style="margin-top: 0;">
-      <br><br>
-      
-      <h2 class="header center blue-text">Connect</h2>
-      <div class="row center unmatched">
-        <h5 class="header col s12 light" style="color:white">Finding your next job opportunity and take the first steps in your new career.<br>All with the press of a button.</h5>
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:25px">
+    <h1 class="header blue-text" style="margin-left: 43%">Interview</h1>
+    <br/><br/>
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+      <div class="w3-quarter">
+        <a href="recommended.html?type=upper-body"> <img src="pics/blank.png" alt="User" style="height: 200px; padding: 15px"> 
+        <h1>Name</h1>
+        <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Age: 5</p>
+        <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Field: Chemistry</p>
+        <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Skills: N/A</p>
+        <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Bio: I sleep</p>
+        <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Email: bob@bill.com</p>
+      </a>
       </div>
-      <div class = "no-matches hide">
-        <h3 class="header col s12 light">No matches found</h5>
+      <div class="w3-quarter">
+        <a href="recommended.html?type=lower-body"> <img src="pics/blank.png" alt="Lower Body" style="height: 200px; padding: 15px">
+          <h1>Name</h1>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Age: 5</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Field: Chemistry</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Skills: N/A</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Bio: I sleep</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Email: bob@bill.com</p>
       </div>
-      <div class = "unmatched">
-        <button id="find-button" class="btn waves-effect waves-light" name="action">Find your matches
-            <i class="material-icons right">search</i>
-        </button>
+      <div class="w3-quarter">
+        <a href="recommended.html?type=cardio"> <img src="pics/blank.png" alt="Cardio" style="height: 200px; padding: 15px">
+          <h1>Name</h1>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Age: 5</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Field: Chemistry</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Skills: N/A</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Bio: I sleep</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Email: bob@bill.com</p>
+        </div>
+      <div class="w3-quarter">
+        <a href="recommended.html?type=core"> <img src="pics/blank.png" alt="Core" style="height: 200px; width: 250px; padding: 15px">
+          <h1>Name</h1>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Age: 5</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Field: Chemistry</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Skills: N/A</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Bio: I sleep</p>
+          <p style="font-size: 20px; color: #13c92c; margin-top:6%;">Email: bob@bill.com</p>
       </div>
-      <br>
-    </div>
-
-    <div class="container center-align center">
-    <div id="collection-wrapper" class="section matched" style="width: 80%; padding-left: 16%" >
-      <ul class = "collection">         
-        
-     </ul>
-     <div class = "center matched" style="padding-left: 6%;">
-      <button id="load-more-button" class="btn btn-small waves-effect waves-light" name="action">Load more matches
-          <i class="material-icons right">expand_more</i>
-      </button>
-    </div>
-     <br><br>
     </div>
     </div>
-
   </div>
-</main>
-
   
+      
+  </div>
+</br></br>
+  </div>
 
-  <footer class="page-footer blue" ><!--style="position: fixed; bottom: 0px; left: 0px; right: 0px">-->
-    <div class="container" >
+
+  <div class="container">
+    <div class="section">
+
+      
+
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer blue">
+    <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text" >Job Net</h5>
-          <p class="grey-text text-lighten-4">A job-finding and communication tool for those looking for passive-income occupations in the wake of the COVID-19 pandemic. Business in trouble?        Connect to businesses around you for help!</p>
+          <h5 class="white-text">Job Net</h5>
+          <p class="grey-text text-lighten-4">A job-finding and communication tool for those looking for passive-income occupations in the wake of the COVID-19 pandemic. Business in trouble?        Connect to businesses around you for help!</h5>
           
 
         </div>
@@ -91,7 +112,10 @@
             <li><a class="white-text" href="mailto:andyzhang@ctemc.org">Email Benjamin</a></li>
           </ul>
         </div>
-        <!--
+      </div>
+      </div>
+    </footer>
+        <!---
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
@@ -107,10 +131,9 @@
       <div class="container">
       Made by <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
-    -->
-    </div>
     </div>
   </footer>
+-->
 <!--SIGN UP MODAL: pops up when sign in is clicked-->
 <div id="modal-signup" class="modal">
   <div class="modal-content">
@@ -148,7 +171,6 @@
     </form>
   </div>
 </div>
-
 <!-- LOGIN MODAL: pops up when login is clicked -->
 <div id="modal-login" class="modal">
   <div class="modal-content">
@@ -167,18 +189,16 @@
   </div>
 </div>
 
-
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
-  <!--  Scripts-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
-  
+
   <script>
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -200,10 +220,9 @@
     const auth = firebase.auth();
     const db = firebase.firestore();
   </script>
-  <script src="js/auth.js" defer></script>
+  <script src="js/auth.js" ></script>
   <script src="js/index.js" defer></script>
   <script src="js/queries.js" defer></script>
-  <script src="js/connect.js" defer></script>
-  
+  <script src="js/chat.js"></script>
   </body>
 </html>
