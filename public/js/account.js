@@ -44,14 +44,20 @@ function displayAccount(user)
                         );
                     }
 
-                    urltoFile(d.resume, 'resume.pdf','application/pdf')
-                    .then(
-                        function(file){ 
-                            console.log(file);
+                    if (d.resume != "No resume") {
+                        urltoFile(d.resume, 'resume.pdf','application/pdf')
+                        .then(
+                            function(file){ 
+                                console.log(file);
+    
+                                resumeElement.innerHTML = "<embed src=\"" + URL.createObjectURL(file) + "\" width=\"800px\" height=\"800px\">"
+                            }
+                        )
+                    } else {
+                        resumeElement.innerHMTL = "<p>No resume uploaded.</p>";
+                    }
 
-                            resumeElement.innerHTML = "<embed src=\"" + URL.createObjectURL(file) + "\" width=\"800px\" height=\"800px\">"
-                        }
-                    )
+                    
                 }
 
             })
