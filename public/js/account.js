@@ -44,8 +44,8 @@ function displayAccount(user)
                         );
                     }
 
-                    if (d.resume != "No resume") {
-                        urltoFile(d.resume, 'resume.pdf','application/pdf')
+                    if (doc.data().resume != "No resume") {
+                        urltoFile(doc.data().resume, 'resume.pdf','application/pdf')
                         .then(
                             function(file){ 
                                 console.log(file);
