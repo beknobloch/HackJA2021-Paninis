@@ -1,7 +1,7 @@
 
 
 // listen for auth status changes and logs them to the console
-let thing64;
+let thing64 = "No resume";
 
 function parseCSV(csv) {
     let x = csv.split(",");
@@ -34,9 +34,6 @@ function convertToBase64() {
         console.log(fileToLoad);
         fileReader.readAsDataURL(fileToLoad);
         }
-    else {
-        thing64 = "No resume";
-    }
 }
 
 auth.onAuthStateChanged(user => {
@@ -93,7 +90,7 @@ try{
 
     auth.onAuthStateChanged(user => {
         db.collection('users').doc(docID).update({
-            userID:  user.uid || "none" 
+            userID: user.uid || "none"
         })
     })
 })
