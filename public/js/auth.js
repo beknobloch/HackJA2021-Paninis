@@ -92,7 +92,7 @@ try{
 
     auth.onAuthStateChanged(user => {
         db.collection('users').doc(docID).update({
-            userID:  "none" || user.uid
+            userID: user.uid || "none"
         })
     })
 })
