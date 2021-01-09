@@ -6,6 +6,7 @@ const fieldElement = document.getElementById('field');
 const skillsElement = document.getElementById('skills');
 const bioElement = document.getElementById('bio');
 const posElement = document.getElementById('pos');
+const resumeElement = document.getElementById('embedDiv');
 
 
 
@@ -41,6 +42,23 @@ function runOtherAccount(user)
                             skillsElement.innerHTML = d.skills;
                             bioElement.innerHTML = d.bio;
                             posElement.innerHTML = d.position;
+
+                            function urltoFile(url, filename, mimeType){
+                                return (fetch(url)
+                                    .then(function(res){return res.arrayBuffer();})
+                                    .then(function(buf){return new File([buf], filename,{type:mimeType});})
+                                );
+                            }
+
+                            urltoFile(d.resume, 'resume.pdf','application/pdf')
+                            .then(
+                                function(file){ 
+                                    console.log(file);
+
+                                    resumeElement.innerHTML = "<embed src=\"" + URL.createObjectURL(file) + "\" width=\"800px\">"
+                                }
+                            )
+
                         }
                     )
                 }
