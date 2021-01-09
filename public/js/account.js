@@ -7,6 +7,7 @@ const bioObject = document.getElementById('bio');
 const numObject = document.getElementById('number');
 const locObject = document.getElementById('location');
 const form = document.querySelector("#accountForm");
+const resumeElement = document.getElementById('embedDiv');
 
 auth.onAuthStateChanged(user => {
     if (user) {
@@ -35,6 +36,22 @@ function displayAccount(user)
                     bioObject.value = doc.data().bio;
                     numObject.value = doc.data().number;
                     locObject.value = doc.data().location;
+
+                    function urltoFile(url, filename, mimeType){
+                        return (fetch(url)
+                            .then(function(res){return res.arrayBuffer();})
+                            .then(function(buf){return new File([buf], filename,{type:mimeType});})
+                        );
+                    }
+
+                    urltoFile(d.resume, 'resume.pdf','application/pdf')
+                    .then(
+                        function(file){ 
+                            console.log(file);
+
+                            resumeElement.innerHTML = "<embed src=\"" + URL.createObjectURL(file) + "\" width=\"800px\" height=\"800px\">"
+                        }
+                    )
                 }
 
             })
