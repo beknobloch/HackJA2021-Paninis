@@ -1,3 +1,38 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main#cool{
+  flex: 1 0 auto;
+  margin-top: auto;
+}
+
+.account-body{
+  margin: 2% 7%;
+}
+
+label{
+  font-size: 110%;
+}
+
+h6{
+  color: rgb(173, 173, 173);
+}
+
+.account-pic{
+  width: 10%;
+  border-radius: 50%;
+  float:left;
+}
 #index-banner{
     background: linear-gradient(rgba(68, 92, 143, 0.527), rgba(0, 0, 0, 0.9)), url('../pics/bg2.jpg');
     background-size: cover;
