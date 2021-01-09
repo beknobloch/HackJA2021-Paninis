@@ -23,7 +23,7 @@
 #search-container,
 #conversation-list,
 #new-message-container{
-    background: #0048AA;
+    background: #13c92c;
 }
 
 #search-container{
@@ -130,7 +130,7 @@ search-container input::placeholder{
     place-content: center center;
     background: #eee;
     border-radius: 100%;
-    color: #002CB8;
+    color: #04a51a;
     text-decoration: none;
     font-size: 3.6rem;
 }
@@ -146,7 +146,7 @@ search-container input::placeholder{
     align-content: center;
     align-items: center;
     grid-area: chat-title;
-    color: #0048AA;
+    color: #13c92c;
     font-weight: bold;
     font-size: 2.0rem;
     border-radius: 0 10px 0 0;
@@ -214,9 +214,9 @@ search-container input::placeholder{
 }
 
 .you-message .message-text {
-    background: #0048AA;
+    background: #13c92c;
     color: #eee;
-    border: 1px solid #0048AA;
+    border: 1px solid #13c92c;
     border-radius: 14px 14px 0 14px;
 
 }
