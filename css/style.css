@@ -1,6 +1,6 @@
 #index-banner{
     background: linear-gradient(rgba(68, 92, 143, 0.527), rgba(0, 0, 0, 0.9)), url('../pics/bg2.jpg');
-    background-size: 220vh 35vw;
+    background-size: cover;
     width: 100%;
     height: 80%;
   }
